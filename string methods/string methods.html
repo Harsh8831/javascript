@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string method</title>
+    <style>
+        button {background-color: green;
+                    color: white;
+                     border-radius: 20px;
+                    cursor: pointer; }
+                    h1 {
+                        border: 2px solid red;
+                        text-align: center;
+                        background-color: grey;
+                    }
+    </style>
+</head>
+<body>
+    <h1>string length</h1>
+    <p id="str_length"></p>
+
+    <h1>string slice</h1>
+    <p id="str_slice"></p>
+
+    <h1>string substring</h1>
+    <p id="str_substring"></p>
+
+    <h1>str substr</h1>
+    <p id="str_substr"></p>
+
+   
+
+    <h1>string replace</h1>
+    <button onclick="strreplace()">str replace</button>
+    <p id="str_replace">"my name is vishal"</p>
+
+    <h4>replace() does not replace all match. it replace the first match only. to replace all match use /g expression.</h4>
+    <p id="str_replaceglobal">this road split into four road.</p>
+
+    <h4>javascript is casesensitive. </h4>
+    <p id="str_replacesen">the Road written in capital will change to map</p>
+
+    <h1>string replace All</h1>
+    <button onclick="strreplaceall()">str replaceall</button>
+    <p id="str_replaceall">I like tajmahal. tajmahal is the one of the 7 wonder. tajmahal is totally white.</p>
+
+    <h1>string to upper case</h1>
+    <button onclick="touppercase()">change to upper case</button>
+    <p id="str_uppercase">hello harsh gupta</p>
+
+    <h1>to lower case</h1>
+    <button onclick="tolowercase()">change to lower case</button>
+    <p id="str_lowercase">HII HARSH GUPTA</p>
+
+    <h1>to string concat</h1>
+    <button onclick="strconcat()">string concat</button>
+    <p id="str_concat"></p>
+
+    <h1>string trim</h1>
+    <button onclick="strtrim()">click to trim</button>
+    <p id="str_trim1"></p>
+    <p id="str_trim2"></p>
+
+    <h1>string trimstart</h1>
+    <button onclick="trimthis()">click here to trim from start</button>
+    <p id="str_trimstart"></p>
+
+    <h1>string trimend</h1>
+    <button onclick="trend()">click to trim end     </button>
+    <p id="str_trimend"></p>
+
+    <h1>string padstart</h1>
+    <p id="str_padstart"></p>
+
+    <h1>string padend</h1>
+    <p id="str_padend"></p>
+
+    <h1>string char</h1>
+    <p id="str_char"></p>
+
+    <h1>string charcodeat</h1>
+    <p id="str_charcodeat"></p>
+    
+    <h1>string split</h1>
+    <p id="str_split"></p>
+
+    <script>
+        let str1 = "hello brother how are you";
+        document.getElementById("str_length").innerHTML = str1.length;
+
+        let str2 = "my name is harsh gupta";
+        document.getElementById("str_slice").innerHTML = str2.slice(11,22);
+
+        let str3 = "what are you studying now";
+        document.getElementById("str_substring").innerHTML = str3.substring(13,21);
+
+        let str4 = "what are you studying now";
+        document.getElementById("str_substr").innerHTML = str4.substr(13,8);
+
+        function strreplace() {
+            let rep = document.getElementById("str_replace").innerHTML;
+            document.getElementById("str_replace").innerHTML = rep.replace("vishal", "harsh");
+            
+            let repglobal = document.getElementById("str_replaceglobal").innerHTML;
+            document.getElementById("str_replaceglobal").innerHTML = repglobal.replace(/road/g, "lane");
+        
+            let repsen = document.getElementById("str_replacesen").innerHTML;
+            document.getElementById("str_replacesen").innerHTML = repsen.replace(/ROAD/i, "map");
+        };
+
+        function strreplaceall() {
+            let repall = document.getElementById("str_replaceall").innerHTML;
+            document.getElementById("str_replaceall").innerHTML = repall.replaceAll("tajmahal","burj khalifa");
+        };
+
+        function touppercase() {
+            let str5 = document.getElementById("str_uppercase").innerHTML;
+            document.getElementById("str_uppercase").innerHTML = str5.toUpperCase();
+        };
+        
+        function tolowercase() {
+            let str6 = document.getElementById("str_lowercase").innerHTML;
+            document.getElementById("str_lowercase").innerHTML = str6.toLowerCase();
+        };
+
+        function strconcat() {
+            let text1 = "harsh";
+            let text2 = "gupta";
+            let text3 = text1.concat(" ", "kumar", " " ,text2);
+            document.getElementById("str_concat").innerHTML = text3;
+        };
+
+        function strtrim() {
+            let stringtrim = "            hello doremon         " ;
+            document.getElementById("str_trim1").innerHTML = stringtrim;
+            document.getElementById("str_trim2").innerHTML = stringtrim.trim();
+        };
+
+        function trimthis() {
+            let trimtrim = "     this will trim from left    " ;
+            document.getElementById("str_trimstart").innerHTML = trimtrim;
+            document.getElementById("str_trimstart").innerHTML = trimtrim.trimStart();
+        };
+
+        function trend() {
+            let trimend = "       hello my boy       ";
+            document.getElementById("str_trimend").innerHTML;
+            document.getElementById("str_trimend").innerHTML = trimend.trimEnd();
+        };
+    </script>
+</body>      
+</html>
