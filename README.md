@@ -1,0 +1,2 @@
+# javascript
+ all avout javascript
