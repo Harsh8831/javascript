@@ -71,15 +71,19 @@
     <p id="str_trimend"></p>
 
     <h1>string padstart</h1>
-    <p id="str_padstart"></p>
+    <button onclick="pstart()">click to see the change</button>
+    <p id="str_padstart">85</p>
 
     <h1>string padend</h1>
-    <p id="str_padend"></p>
+    <button onclick="paend()">click to see the change</button>
+    <p id="str_padend">65</p>
 
     <h1>string char</h1>
-    <p id="str_char"></p>
+    <button onclick="stchar()">click here to see the change</button>
+    <p id="str_chaat"></p>
 
     <h1>string charcodeat</h1>
+    <button onclick="strchacoat()">click to see the change</button>
     <p id="str_charcodeat"></p>
     
     <h1>string split</h1>
@@ -148,6 +152,33 @@
             document.getElementById("str_trimend").innerHTML;
             document.getElementById("str_trimend").innerHTML = trimend.trimEnd();
         };
+
+        function pstart() {
+            let ps = document.getElementById("str_padstart").innerHTML;
+            document.getElementById("str_padstart").innerHTML = ps.padStart(22, "boy");
+        };
+
+        function paend() {
+            let pe = document.getElementById("str_padend").innerHTML;
+            document.getElementById("str_padend").innerHTML = pe.padEnd(15, "bikes");
+        };
+
+        function stchar() {
+            let schar = "HELLO HARSH BHAI"
+            document.getElementById("str_chaat").innerHTML = schar;
+            document.getElementById("str_chaat").innerHTML = schar.charAt(6);
+        };
+
+        function strchacoat() {
+            let stchaco = "WEB DEVELOPMENT";
+             document.getElementById("str_charcodeat").innerHTML = stchaco;
+            document.getElementById("str_charcodeat").innerHTML = stchaco.charCodeAt(8);
+        };
+
+     
+        
+        
     </script>
+
 </body>      
 </html>
